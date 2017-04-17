@@ -152,20 +152,22 @@ function drawAxisLabels(tester, xaxis, yaxis, trace, t, layer, labels, labelClas
             orientation = orientText(trace, xaxis, yaxis, label.xy, [Math.cos(angle), Math.sin(angle)]);
         }
         var direction = (label.endAnchor ? -1 : 1) * orientation.flip;
-        var bbox = Drawing.measureText(tester, label.text, label.font);
 
-        d3.select(this)
+        var el = d3.select(this)
             .attr('text-anchor', direction > 0 ? 'start' : 'end')
             .text(label.text)
-            .attr('transform',
-                // Translate to the correct point:
-                'translate(' + orientation.p[0] + ',' + orientation.p[1] + ') ' +
-                // Rotate to line up with grid line tangent:
-                'rotate(' + orientation.angle + ')' +
-                // Adjust the baseline and indentation:
-                'translate(' + label.axis.labelpadding * direction + ',' + bbox.height * 0.3 + ')'
-            )
             .call(Drawing.font, label.font.family, label.font.size, label.font.color);
+
+        var bbox = Drawing.bBox(el.node());
+
+        el.attr('transform',
+            // Translate to the correct point:
+            'translate(' + orientation.p[0] + ',' + orientation.p[1] + ') ' +
+            // Rotate to line up with grid line tangent:
+            'rotate(' + orientation.angle + ')' +
+            // Adjust the baseline and indentation:
+            'translate(' + label.axis.labelpadding * direction + ',' + bbox.height * 0.3 + ')'
+        );
 
         maxExtent = Math.max(maxExtent, bbox.width + label.axis.labelpadding);
     });
