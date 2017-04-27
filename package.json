@@ -1,7 +1,7 @@
 {
   "name": "plotly.js",
   "version": "1.26.1",
-  "description": "The open source javascript graphing library that powers plotly",
+  "description": "The open source JavaScript graphing library that powers plotly",
   "license": "MIT",
   "main": "./lib/index.js",
   "webpack": "./dist/plotly.js",
@@ -12,13 +12,18 @@
   "bugs": {
     "url": "https://github.com/plotly/plotly.js/issues"
   },
+  "homepage": "https://plot.ly/javascript/",
   "author": "Plotly, Inc.",
   "keywords": [
     "graphing",
     "plotting",
     "data",
     "visualization",
-    "plotly"
+    "plotly",
+    "data-visualization",
+    "d3",
+    "webgl",
+    "charting-library"
   ],
   "scripts": {
     "preprocess": "node tasks/preprocess.js",
