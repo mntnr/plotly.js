@@ -1,7 +1,11 @@
+# plotly.js
+
 <a href="https://plot.ly/javascript/"><img src="http://images.plot.ly/logo/plotlyjs-logo@2x.png" height="70"></a>
 
 [![npm version](https://badge.fury.io/js/plotly.js.svg)](https://badge.fury.io/js/plotly.js)
 [![circle ci](https://circleci.com/gh/plotly/plotly.js.png?&style=shield&circle-token=1f42a03b242bd969756fc3e53ede204af9b507c0)](https://circleci.com/gh/plotly/plotly.js)
+
+> The open source JavaScript graphing library that powers plotly
 
 Built on top of [d3.js](http://d3js.org/) and [stack.gl](http://stack.gl/),
 plotly.js is a high-level, declarative charting library. plotly.js ships with over 20
@@ -15,25 +19,25 @@ and more.
 
 [Contact us](https://plot.ly/products/consulting-and-oem/) for Plotly.js consulting, dashboard development, application integration, and feature additions.
 
-## Table of contents
+## Table of Contents
 
-* [Quick start options](#quick-start-options)
-* [Modules](#modules)
-* [Bugs and feature requests](#bugs-and-feature-requests)
-* [Documentation](#documentation)
-* [Contributing](#contributing)
-* [Community](#community)
-* [Clients for R, Python, Node, and MATLAB](#clients-for-r-python-node-and-matlab)
-* [Creators](#creators)
-* [Copyright and license](#copyright-and-license)
+- [Install](#install)
+- [Modules](#modules)
+- [Documentation](#documentation)
+- [Contribute](#contribute)
+- [Community](#community)
+- [Versioning](#versioning)
+- [Clients for R, Python, Node, and MATLAB](#clients-for-r-python-node-and-matlab)
+- [Creators](#creators)
+- [License](#license)
 
+## Install
 
-## Quick start options
+Here are some quick-start options.
 
 #### Download the latest release
-[Latest Release on Github](https://github.com/plotly/plotly.js/releases/)
 
-and use the plotly.js `dist` file(s). More info [here](https://github.com/plotly/plotly.js/blob/master/dist/README.md).
+[Download on Github from the releases folder ](https://github.com/plotly/plotly.js/releases/) and use the plotly.js `dist` file(s). More info [here](https://github.com/plotly/plotly.js/blob/master/dist/README.md).
 
 #### Clone the repo
 
@@ -41,7 +45,7 @@ and use the plotly.js `dist` file(s). More info [here](https://github.com/plotly
 git clone https://github.com/plotly/plotly.js.git
 ```
 
-and use the plotly.js `dist` file(s).
+Use the plotly.js `dist` file(s).
 
 #### Install with `npm`
 
@@ -49,9 +53,12 @@ and use the plotly.js `dist` file(s).
 npm install plotly.js
 ```
 
-and require plotly.js using CommonJS as `var Plotly = require('plotly.js');` or use the plotly.js `dist` file(s).
+Require plotly.js using CommonJS as `var Plotly = require('plotly.js');` (or `const Plotly = require('plotly.js')` for ES6) or use the plotly.js `dist` file(s).
 
 #### Use the plotly.js CDN hosted by Fastly
+
+Add these to the `head` of your website:
+
 ```html
 <!-- Latest compiled and minified plotly.js JavaScript -->
 <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -63,9 +70,9 @@ and require plotly.js using CommonJS as `var Plotly = require('plotly.js');` or 
 <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.js"></script>
 ```
 
-and use the `Plotly` object in the window scope.
+Then, use the `Plotly` object in the window scope.
 
-##### Read the [Getting started page](https://plot.ly/javascript/getting-started/) for more examples.
+#### Read the [Getting started page](https://plot.ly/javascript/getting-started/) for more examples.
 
 ## Modules
 
@@ -107,10 +114,6 @@ Important: the plotly.js code base contains some non-ascii characters. Therefore
 
 Browserify [transforms](https://github.com/substack/browserify-handbook#transforms) are required to build plotly.js, namely, [glslify](https://github.com/stackgl/glslify) to transform WebGL shaders and [cwise](https://github.com/scijs/cwise) to compile component-wise array operations. To make the trace module system work with Webpack, you will need to install [ify-loader](https://github.com/hughsk/ify-loader) and add it to your `webpack.config.json` for your build to correctly bundle plotly.js files.
 
-## Bugs and feature requests
-
-Have a bug or a feature request? Please first read the [issues guidelines](https://github.com/plotly/plotly.js/blob/master/CONTRIBUTING.md#opening-issues).
-
 ## Documentation
 
 Official plotly.js documentation is hosted on [plot.ly/javascript](https://plot.ly/javascript).
@@ -120,9 +123,17 @@ For more info about contributing to Plotly documentation, please read through [c
 
 You can also suggest new documentation examples by submitting a [Codepen](http://codepen.io/tag/plotly/) on community.plot.ly with tag [`plotly-js`](http://community.plot.ly/c/plotly-js).
 
-## Contributing
+## Contribute
 
 Please read through our [contributing guidelines](https://github.com/plotly/plotly.js/blob/master/CONTRIBUTING.md). Included are directions for opening issues, using plotly.js in your project and notes on development.
+
+Please note that all interactions with Plotly should be in accordance with the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+### Bugs and feature requests
+
+Have a bug or a feature request? Please first read the [issues guidelines](https://github.com/plotly/plotly.js/blob/master/CONTRIBUTING.md#opening-issues).
+
+[Contact us](https://plot.ly/products/consulting-and-oem/) for Plotly.js consulting, dashboard development, application integration, and feature additions.
 
 ## Community
 
@@ -168,7 +179,7 @@ plotly.js charts can also be created and saved online for free at [plot.ly/plot]
 |**Alex Vados**| [@alexander-daniel](https://github.com/alexander-daniel) | |
 
 
-## Copyright and license
+## License
 
 Code and documentation copyright 2017 Plotly, Inc.
 
